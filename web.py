@@ -38,6 +38,9 @@ try:
         weight_2 = None
 except ValueError:
     st.write("Ого, ти примудрився натупити в такому простому застосунку. Молодець!")
+# Обробка інших типів помилок
+except Exception as e:
+    st.write("{e}")
 
 
 # Вирівнювання кнопки по центру
@@ -57,10 +60,10 @@ if button_clicked:
             st.write(f"Так і шо ви думаєте, другий продукт вигідніше на {profit} грн")
         else:
             st.write("Друже, ціна ідентична! Мабуть це дилема Ескобара!")
-    except ValueError:
-        st.write("Ого, ти примудрився натупити в такому простому застосунку xD Молодець!")
+    except TypeError:
+        st.write()
 
-st.markdown("<h4 style='text-align: center; font-family: Helvetica, sans-serif; font-size: 16px; font-weight: lighter; margin-top: 200px;'>Версія 1.0.0</h4>",
+st.markdown("<h4 style='text-align: center; font-family: Helvetica, sans-serif; font-size: 16px; font-weight: lighter; margin-top: 200px;'>Версія 1.0.1</h4>",
             unsafe_allow_html=True)
 
 
